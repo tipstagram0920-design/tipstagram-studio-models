@@ -1,0 +1,35 @@
+{
+  "schema": 1,
+  "updated": "2026-11-17",
+  "notes": "첫 목록 (v0.2.1 기준)",
+  "models": [
+    {
+      "role": "vad", "name": "말소리 구간 찾기 (Silero VAD)", "version": "silero-vad-2024", "minApp": "0.2.1", "required": true, "mb": 1,
+      "license": "MIT",
+      "url": "https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models/silero_vad.onnx",
+      "files": [{ "path": "silero_vad.onnx", "sha256": "9e2449e1087496d8d4caba907f23e0bd3f78d91fa552479bb9c23ac09cbb1fd6", "size": 643854 }]
+    },
+    {
+      "role": "asr", "name": "자막 인식 (SenseVoice)", "version": "sensevoice-int8-2024-07-17", "minApp": "0.2.1", "required": true, "mb": 156,
+      "license": "FunASR Model License (상업 사용 가능, 출처 표기)",
+      "url": "https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models/sherpa-onnx-sense-voice-zh-en-ja-ko-yue-int8-2024-07-17.tar.bz2",
+      "archive": "tar.bz2",
+      "files": [
+        { "path": "sensevoice/model.int8.onnx", "from": "model.int8.onnx", "sha256": "c71f0ce00bec95b07744e116345e33d8cbbe08cef896382cf907bf4b51a2cd51", "size": 239233841 },
+        { "path": "sensevoice/tokens.txt", "from": "tokens.txt", "sha256": "f449eb28dc567533d7fa59be34e2abca8784f771850c78a47fb731a31429a1dc", "size": 315894 }
+      ]
+    },
+    {
+      "role": "person", "name": "사람 영역 찾기 (U²-Net human seg)", "version": "u2net-human-seg-v0", "minApp": "0.2.1", "required": true, "mb": 168,
+      "license": "Apache-2.0",
+      "url": "https://github.com/danielgatis/rembg/releases/download/v0.0.0/u2net_human_seg.onnx",
+      "files": [{ "path": "u2net_human_seg.onnx", "sha256": "01eb6a29a5c4d8edb30b56adad9bb3a2a0535338e480724a213e0acfd2d1c73c", "size": 175997641 }]
+    },
+    {
+      "role": "matte", "name": "정밀 누끼 (IS-Net)", "version": "isnet-general-use-v0", "minApp": "0.2.1", "required": false, "mb": 171,
+      "license": "Apache-2.0",
+      "url": "https://github.com/danielgatis/rembg/releases/download/v0.0.0/isnet-general-use.onnx",
+      "files": [{ "path": "isnet-general-use.onnx", "sha256": "60920e99c45464f2ba57bee2ad08c919a52bbf852739e96947fbb4358c0d964a", "size": 178648008 }]
+    }
+  ]
+}
